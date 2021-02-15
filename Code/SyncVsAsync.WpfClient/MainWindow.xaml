@@ -1,0 +1,53 @@
+﻿<mahapps:MetroWindow x:Class="SyncVsAsync.WpfClient.MainWindow"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:mahapps="http://metro.mahapps.com/winfx/xaml/controls"
+                     xmlns:wpfClient="clr-namespace:SyncVsAsync.WpfClient"
+                     mc:Ignorable="d"
+                     d:DataContext="{d:DesignInstance Type=wpfClient:MainWindowViewModel, IsDesignTimeCreatable=False}"
+                     Title="ASP .NET Core Client" Height="480" Width="525" Background="{StaticResource MahApps.Brushes.Window.Background}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20">
+
+                <Label Content="Number of Calls"
+                       Target="{Binding ElementName=NumberOfCallsTextBox, Mode=OneTime}" />
+                <TextBox x:Name="NumberOfCallsTextBox"
+                         Text="{Binding NumberOfCallsText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="{Binding IsBusy, Mode=OneWay, Converter={StaticResource BooleanInverter}}" />
+
+                <Label Content="Wait Interval (in ms)"
+                       Target="{Binding ElementName=WaitIntervalTextBox, Mode=OneTime}"
+                       Margin="0 20 0 0" />
+                <TextBox x:Name="WaitIntervalTextBox"
+                         Text="{Binding WaitIntervalText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="{Binding IsBusy, Mode=OneWay, Converter={StaticResource BooleanInverter}}" />
+
+                <CheckBox Content="Call asynchronous API" Margin="0 20 0 0" IsChecked="{Binding IsCallingAsynchronousApi, Mode=TwoWay}" />
+
+                <mahapps:ProgressRing Margin="0 20 0 0" Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}" />
+
+                <TextBlock Text="{Binding ResultText}"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"
+                           Foreground="{StaticResource MahApps.Brushes.IdealForeground}"
+                           FontSize="14" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Grid.Row="1"
+                HorizontalAlignment="Right"
+                Content="Call API"
+                Margin="0 5 16 5"
+                Width="100"
+                Background="{StaticResource MahApps.Brushes.Accent}"
+                Command="{Binding CallApiCommand, Mode=OneTime}"
+                Foreground="{StaticResource MahApps.Brushes.IdealForeground}" />
+    </Grid>
+</mahapps:MetroWindow>
