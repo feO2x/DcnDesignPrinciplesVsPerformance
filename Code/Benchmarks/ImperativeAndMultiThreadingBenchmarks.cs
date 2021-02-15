@@ -68,6 +68,21 @@ namespace Benchmarks
         }
 
         [Benchmark]
+        public int ThrowAndCatchException()
+        {
+            try
+            {
+                throw new Exception("Something went wrong");
+            }
+            catch
+            {
+                Count++;
+            }
+
+            return Count;
+        }
+
+        [Benchmark]
         public int IncrementOnThreadPool() =>
             Task.Run(() => Count++).Result;
 
