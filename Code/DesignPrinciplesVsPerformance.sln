@@ -13,13 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncVsAsync.AspNetCoreServi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Simple Example for Thread Stacks and Managed Heap", "2 Simple Example for Thread Stacks and Managed Heap", "{85C12DE3-6855-435D-B7C5-5DFBC1814D86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExample", "SimpleExample\SimpleExample.csproj", "{4A2EF626-5360-440C-8C39-F24AAC6C10C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleExample", "SimpleExample\SimpleExample.csproj", "{4A2EF626-5360-440C-8C39-F24AAC6C10C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Async Await Decompiled", "4 Async Await Decompiled", "{8870C358-022E-43D9-8367-4A8EA6B549F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Async Await Decompiled", "5 Async Await Decompiled", "{8870C358-022E-43D9-8367-4A8EA6B549F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Benchmarks", "1 Benchmarks", "{25A1BCE2-80AD-450D-960D-B306D8607E74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitDecompiled.WpfClient", "AsyncAwaitDecompiled.WpfClient\AsyncAwaitDecompiled.WpfClient.csproj", "{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwaitDecompiled.WpfClient", "AsyncAwaitDecompiled.WpfClient\AsyncAwaitDecompiled.WpfClient.csproj", "{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 A Typical Web App", "4 A Typical Web App", "{53752B0C-CF13-44E6-89C8-5E0235C9DC6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreService", "AspNetCoreService\AspNetCoreService.csproj", "{62508AFF-EF5B-4622-9F40-A69763B214EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreService.Tests", "AspNetCoreService.Tests\AspNetCoreService.Tests.csproj", "{0562567D-3C14-4E37-BFCE-F13DC8D04A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +97,30 @@ Global
 		{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8}.Release|x64.Build.0 = Release|Any CPU
 		{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8}.Release|x86.Build.0 = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|x64.Build.0 = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Debug|x86.Build.0 = Debug|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|x64.ActiveCfg = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|x64.Build.0 = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|x86.ActiveCfg = Release|Any CPU
+		{62508AFF-EF5B-4622-9F40-A69763B214EC}.Release|x86.Build.0 = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|x64.Build.0 = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Debug|x86.Build.0 = Debug|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|x64.ActiveCfg = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|x64.Build.0 = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|x86.ActiveCfg = Release|Any CPU
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +131,8 @@ Global
 		{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9} = {CF798F3D-B187-4622-AECB-DFC760E662D0}
 		{4A2EF626-5360-440C-8C39-F24AAC6C10C4} = {85C12DE3-6855-435D-B7C5-5DFBC1814D86}
 		{8B5BBE51-51B7-4FF4-A72B-075F7B9486F8} = {8870C358-022E-43D9-8367-4A8EA6B549F7}
+		{62508AFF-EF5B-4622-9F40-A69763B214EC} = {53752B0C-CF13-44E6-89C8-5E0235C9DC6A}
+		{0562567D-3C14-4E37-BFCE-F13DC8D04A06} = {53752B0C-CF13-44E6-89C8-5E0235C9DC6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F11EEC21-95AD-454F-8408-C6D74AF4E17E}

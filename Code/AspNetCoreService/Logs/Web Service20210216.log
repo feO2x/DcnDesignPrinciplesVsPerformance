@@ -1,0 +1,15 @@
+2021-02-16 15:29:54.453 +01:00 [INF] User profile is available. Using 'C:\Users\kenny\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-02-16 15:29:54.727 +01:00 [INF] Now listening on: https://localhost:5001
+2021-02-16 15:29:54.728 +01:00 [INF] Now listening on: http://localhost:5000
+2021-02-16 15:29:54.729 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-16 15:29:54.730 +01:00 [INF] Hosting environment: Development
+2021-02-16 15:29:54.731 +01:00 [INF] Content root path: D:\Programming\DesignPrinciplesVsPerformance\Code\AspNetCoreService
+2021-02-16 15:30:28.936 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/contacts - -
+2021-02-16 15:30:28.965 +01:00 [INF] Executing endpoint 'AspNetCoreService.Contacts.GetContacts.GetContactsController.GetContacts (AspNetCoreService)'
+2021-02-16 15:30:29.005 +01:00 [INF] Route matched with {action = "GetContacts", controller = "GetContacts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[AspNetCoreService.Contacts.GetContacts.ContactsPageDto]] GetContacts(AspNetCoreService.Paging.PageDto) on controller AspNetCoreService.Contacts.GetContacts.GetContactsController (AspNetCoreService).
+2021-02-16 15:30:29.163 +01:00 [INF] Executing ObjectResult, writing value of type 'AspNetCoreService.Contacts.GetContacts.ContactsPageDto'.
+2021-02-16 15:30:29.186 +01:00 [INF] Executed action AspNetCoreService.Contacts.GetContacts.GetContactsController.GetContacts (AspNetCoreService) in 177.2119ms
+2021-02-16 15:30:29.188 +01:00 [INF] Executed endpoint 'AspNetCoreService.Contacts.GetContacts.GetContactsController.GetContacts (AspNetCoreService)'
+2021-02-16 15:30:29.189 +01:00 [INF] HTTP GET /api/contacts responded 200 in 244.9819 ms
+2021-02-16 15:30:29.191 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/contacts - - - 200 - application/json;+charset=utf-8 256.5764ms
+2021-02-16 15:31:56.716 +01:00 [INF] Application is shutting down...
