@@ -25,9 +25,9 @@ namespace SyncVsAsync.WpfClient
             _performanceManager = performanceManager.MustNotBeNull(nameof(performanceManager));
             _validationManager = new ValidationManager<string>(this);
             _callApiCommand = new DelegateCommand(CallApi, () => CanCallApi);
-            _numberOfCalls = 500;
+            _numberOfCalls = 1000;
             _numberOfCallsText = _numberOfCalls.ToString();
-            _waitIntervalInMilliseconds = 2000;
+            _waitIntervalInMilliseconds = 1000;
             _waitIntervalText = _waitIntervalInMilliseconds.ToString();
             _isCallingAsynchronousApi = true;
         }
