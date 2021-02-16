@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarks", "Benchmarks\Be
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sync vs Async in Web Apps", "Sync vs Async in Web Apps", "{CF798F3D-B187-4622-AECB-DFC760E662D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncVsAsync.WpfClient", "SyncVsAsync.WpfClient\SyncVsAsync.WpfClient.csproj", "{B6B02DB5-F64B-4822-AC3B-E83E794232A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncVsAsync.WpfClient", "SyncVsAsync.WpfClient\SyncVsAsync.WpfClient.csproj", "{B6B02DB5-F64B-4822-AC3B-E83E794232A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncVsAsync.AspNetCoreService", "SyncVsAsync.AspNetCoreService\SyncVsAsync.AspNetCoreService.csproj", "{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncVsAsync.AspNetCoreService", "SyncVsAsync.AspNetCoreService\SyncVsAsync.AspNetCoreService.csproj", "{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simple Example for Thread Stacks and Managed Heap", "Simple Example for Thread Stacks and Managed Heap", "{85C12DE3-6855-435D-B7C5-5DFBC1814D86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExample", "SimpleExample\SimpleExample.csproj", "{4A2EF626-5360-440C-8C39-F24AAC6C10C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,18 @@ Global
 		{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9}.Release|x64.Build.0 = Release|Any CPU
 		{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9}.Release|x86.ActiveCfg = Release|Any CPU
 		{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9}.Release|x86.Build.0 = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|x64.Build.0 = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Debug|x86.Build.0 = Debug|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|x64.ActiveCfg = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|x64.Build.0 = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +80,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B6B02DB5-F64B-4822-AC3B-E83E794232A4} = {CF798F3D-B187-4622-AECB-DFC760E662D0}
 		{EB2E7A8F-7FE8-429F-AF2D-B114CD19E6A9} = {CF798F3D-B187-4622-AECB-DFC760E662D0}
+		{4A2EF626-5360-440C-8C39-F24AAC6C10C4} = {85C12DE3-6855-435D-B7C5-5DFBC1814D86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F11EEC21-95AD-454F-8408-C6D74AF4E17E}
