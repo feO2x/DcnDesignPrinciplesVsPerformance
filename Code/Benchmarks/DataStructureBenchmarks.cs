@@ -14,6 +14,12 @@ namespace Benchmarks
 
         public string SearchTerm { get; set; } = string.Empty;
 
+        [Benchmark]
+        public bool FindLastStringInList() => List!.Contains(SearchTerm);
+
+        [Benchmark(Baseline = true)]
+        public bool FindStringInDictionary() => Dictionary!.ContainsKey(SearchTerm);
+
         [GlobalSetup(Target = nameof(FindLastStringInList))]
         public void SetupList()
         {
@@ -47,12 +53,6 @@ namespace Benchmarks
             Dictionary = dictionary;
             SearchTerm = newString;
         }
-
-        [Benchmark]
-        public bool FindLastStringInList() => List!.Contains(SearchTerm);
-
-        [Benchmark(Baseline = true)]
-        public bool FindStringInDictionary() => Dictionary!.ContainsKey(SearchTerm);
 
         private static string CreateNewString(Random random)
         {

@@ -13,26 +13,6 @@ namespace Benchmarks
         public DbContextOptions<DatabaseContext>? DbContextOptions;
         public IDocumentStore? RavenDbStore;
 
-        [GlobalSetup(Target = nameof(LoadEmployeeFromRavenDb))]
-        public void SetupRavenDbConnection()
-        {
-            RavenDbStore = new DocumentStore
-                {
-                    Urls = new[] { "http://localhost:10001" },
-                    Database = "AdventureWorks"
-                }
-               .Initialize();
-        }
-
-        [GlobalSetup(Target = nameof(LoadPersonFromMsSqlViaEfCore))]
-        public void SetupEntityFrameworkContext()
-        {
-            DbContextOptions =
-                new DbContextOptionsBuilder<DatabaseContext>()
-                   .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AdventureWorks2016;Integrated Security=True")
-                   .Options;
-        }
-
         [Benchmark(Baseline = true)]
         public Employee? LoadEmployeeFromRavenDb()
         {
@@ -48,6 +28,26 @@ namespace Benchmarks
                           .Include(p => p.BusinessEntity.BusinessEntityAddresses)
                           .Include(p => p.PersonPhones)
                           .FirstOrDefault(p => p.BusinessEntityId == 1663);
+        }
+
+        [GlobalSetup(Target = nameof(LoadEmployeeFromRavenDb))]
+        public void SetupRavenDbConnection()
+        {
+            RavenDbStore = new DocumentStore
+            {
+                Urls = new[] { "http://localhost:10001" },
+                Database = "AdventureWorks"
+            }
+               .Initialize();
+        }
+
+        [GlobalSetup(Target = nameof(LoadPersonFromMsSqlViaEfCore))]
+        public void SetupEntityFrameworkContext()
+        {
+            DbContextOptions =
+                new DbContextOptionsBuilder<DatabaseContext>()
+                   .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=AdventureWorks2016;Integrated Security=True")
+                   .Options;
         }
     }
 }

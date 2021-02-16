@@ -14,32 +14,23 @@ namespace Benchmarks
         private Func<int>? _counterViaDelegate;
         private ICounter? _counterViaInterface;
 
-
-        [Benchmark (Baseline = true)]
+        [Benchmark(Baseline = true)]
         public int CallStaticMethod() => IncrementCount();
 
         private static int IncrementCount() => Count++;
 
-        [GlobalSetup(Target = nameof(CallInstanceMethod))]
-        public void SetupCounter() => _counter = new Counter(Count);
 
         [Benchmark]
         public int CallInstanceMethod() => _counter!.Increment();
 
-        [GlobalSetup(Target = nameof(CallInterfaceMethod))]
-        public void SetupCounterViaInterface() => _counterViaInterface = new Counter(Count);
 
         [Benchmark]
         public int CallInterfaceMethod() => _counterViaInterface!.IncrementViaInterfaceCall();
 
-        [GlobalSetup(Target = nameof(CallViaOverriddenMethod))]
-        public void SetupCounterViaBaseClass() => _counterViaBaseClass = new Counter(Count);
 
         [Benchmark]
         public int CallViaOverriddenMethod() => _counterViaBaseClass!.IncrementViaOverriddenMethod();
 
-        [GlobalSetup(Target = nameof(CallDelegate))]
-        public void SetupCounterViaDelegate() => _counterViaDelegate = IncrementCount;
 
         [Benchmark]
         public int CallDelegate() => _counterViaDelegate!();
@@ -94,6 +85,18 @@ namespace Benchmarks
             thread.Join();
             return Count;
         }
+
+        [GlobalSetup(Target = nameof(CallInstanceMethod))]
+        public void SetupCounter() => _counter = new Counter(Count);
+
+        [GlobalSetup(Target = nameof(CallInterfaceMethod))]
+        public void SetupCounterViaInterface() => _counterViaInterface = new Counter(Count);
+
+        [GlobalSetup(Target = nameof(CallViaOverriddenMethod))]
+        public void SetupCounterViaBaseClass() => _counterViaBaseClass = new Counter(Count);
+
+        [GlobalSetup(Target = nameof(CallDelegate))]
+        public void SetupCounterViaDelegate() => _counterViaDelegate = IncrementCount;
     }
 
     public interface ICounter
