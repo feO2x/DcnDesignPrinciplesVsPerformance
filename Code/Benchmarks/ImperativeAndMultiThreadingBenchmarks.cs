@@ -39,7 +39,7 @@ namespace Benchmarks
         public int CallViaOverriddenMethod() => _counterViaBaseClass!.IncrementViaOverriddenMethod();
 
         [GlobalSetup(Target = nameof(CallDelegate))]
-        public void SetupCounterViewDelegate() => _counterViaDelegate = IncrementCount;
+        public void SetupCounterViaDelegate() => _counterViaDelegate = IncrementCount;
 
         [Benchmark]
         public int CallDelegate() => _counterViaDelegate!();
